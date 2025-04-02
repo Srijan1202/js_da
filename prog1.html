@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World with JavaScript</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin: 50px; }
+        button { margin: 10px; padding: 10px; cursor: pointer; }
+        #output { font-weight: bold; color: blue; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <h1>JavaScript Output Methods</h1>
+    <p id="output">Click a button to see the output!</p>
+    <button onclick="showAlert()">Show Alert</button>
+    <button onclick="writeToConsole()">Log to Console</button>
+    <button onclick="updateInnerHTML()">Update Text</button>
+    <button onclick="writeToPage()">Write to Page</button>
+    <button onclick="changeBackgroundColor()">Change Background</button>
+    
+    <script>
+        function writeToConsole() {
+            console.log("Hello, World! - Console Log");
+        }
+
+        function showAlert() {
+            alert("Hello, World! - Alert Box");
+        }
+        
+        function writeToPage() {
+            document.body.innerHTML = "<h1>Hello, World! - document.write()</h1> (Note: This overwrites the page!)";
+        }
+
+        function updateInnerHTML() {
+            document.getElementById("output").innerHTML = "Hello, World! - Updated with innerHTML";
+        }
+        function changeBackgroundColor() {
+            document.body.style.backgroundColor = `#${Math.floor(Math.random()*16777215).toString(16)}`;
+        }
+    </script>
+</body>
+</html>
